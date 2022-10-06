@@ -1,0 +1,638 @@
+--wait(0.5)
+
+local fold = Instance.new("Folder", game)
+fold.Name = "◄c~≥ºQÆç"
+
+local s = Instance.new("ScreenGui")
+
+local mavis = Instance.new("ImageLabel")
+local mtext = Instance.new("TextLabel")
+
+--Properties:
+
+mavis.Name = "mavis"
+mavis.Parent = s
+mavis.AnchorPoint = Vector2.new(0.5, 0.5)
+mavis.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mavis.BackgroundTransparency = 1.000
+mavis.BorderSizePixel = 0
+mavis.LayoutOrder = 1
+mavis.Position = UDim2.new(0.924535334, 0, 0.926433921, 0)
+mavis.Size = UDim2.new(0, 209, 0, 142)
+mavis.Image = "rbxassetid://11127104721"
+mavis.ImageTransparency = 0.500
+
+mtext.Parent = s
+mtext.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mtext.BackgroundTransparency = 1.000
+mtext.Position = UDim2.new(0.650, 0, 0.948877811, 0)
+mtext.Size = UDim2.new(0, 466, 0, 41)
+mtext.Font = Enum.Font.SourceSans
+mtext.Text = "MUSICPLAYER MADE BY THEUNKNOWN!!"
+mtext.TextColor3 = Color3.fromRGB(0, 0, 0)
+mtext.TextSize = 33.000
+mtext.TextStrokeColor3 = Color3.fromRGB(113, 0, 179)
+mtext.TextStrokeTransparency = 0.000
+mtext.TextWrapped = true
+
+local primary, secondary = Color3.fromRGB(0,0,0),Color3.fromRGB(255, 150, 0)
+
+local holidays={"MUSICPLAYER made by TheUnknown", "🎃MUSICPLAYER made by TheUnknown🍂", "🎄MUSICPLAYER made by TheUnknown🎁"}
+
+local guiShake = false
+local camShake = false
+
+function isNumber(str)
+	if tonumber(str) ~= nil or str == 'inf' then
+		return true
+	end
+end
+function note(title, desc, a3, a4, a5)
+	local ScreenGui = Instance.new("ScreenGui")
+	local Notif = Instance.new("Frame")
+	local corn = Instance.new("UICorner", Notif)
+	local TextLabel = Instance.new("TextLabel")
+	local TextLabel_2 = Instance.new("TextLabel")
+
+	ScreenGui.Parent = game.CoreGui
+	ScreenGui.Name = "Notification"
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	Notif.Name = "Notif"
+	Notif.Parent = ScreenGui
+	Notif.AnchorPoint = Vector2.new(0.5, 0.5)
+	Notif.BackgroundColor3 = a4
+	Notif.BackgroundTransparency = 0.150
+	Notif.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	Notif.BorderSizePixel = 1
+	Notif.Position = UDim2.new(0.081, 0, 1.07, 0)
+	Notif.Size = UDim2.new(0, 192, 0, 100)
+
+	TextLabel.Parent = Notif
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.BackgroundTransparency = 1.000
+	TextLabel.Size = UDim2.new(0, 192, 0, 26)
+	TextLabel.Font = Enum.Font.SourceSans
+	TextLabel.Text = title
+	TextLabel.TextColor3 = a5
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 14.000
+	TextLabel.TextWrapped = true
+
+	TextLabel_2.Parent = Notif
+	TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_2.BackgroundTransparency = 1.000
+	TextLabel_2.Position = UDim2.new(0, 0, 0.25999999, 0)
+	TextLabel_2.Size = UDim2.new(0, 192, 0, 74)
+	TextLabel_2.Font = Enum.Font.SourceSans
+	TextLabel_2.Text = desc
+	TextLabel_2.TextColor3 = a5
+	TextLabel_2.TextSize = 18.000
+	TextLabel_2.TextWrapped = true
+	TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+	TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
+
+	game:GetService("TweenService"):Create(Notif, TweenInfo.new(1, Enum.EasingStyle.Exponential), {["Position"]=UDim2.new(0.0650000002, 0, 0.926999978, 0)}):Play()
+	local S=Instance.new("Sound",game:GetService("SoundService"));S.SoundId="rbxassetid://261072074";S:Play()
+	wait(a3)
+	game:GetService("TweenService"):Create(Notif, TweenInfo.new(1, Enum.EasingStyle.Exponential), {["Position"]=UDim2.new(-0.0799999982, 0, 0.922999978, 0)}):Play()
+	S:Remove()
+	wait(1)
+	ScreenGui:Remove()
+end
+function rt(Table) -- Returns a random [...] inside of a table
+	return Table[math.random(1,#Table)]
+end
+function r(Length) -- Generates a random string | Edit if you want
+	local NewString = "UNKNOWN-"
+	for _=1,Length or math.random(5,100) do
+		local Strings = { -- Delete which u want or not
+			--string.char(math.random(48,57)), -- 0 to 9
+			--string.char(math.random(33,47)), -- Stuff like !@#$%^&*()
+			string.char(math.random(65,90)), -- A to Z [ CAPITALS ]
+			string.char(math.random(97,122)) -- a to z [ not capitals ]
+		}
+		NewString = NewString..rt(Strings)
+	end
+	return NewString or math.random()
+end
+function rrev(Length) -- Generates a random string | Edit if you want
+	local NewString = "-UNKNOWN"
+	for _=1,Length or math.random(5,100) do
+		local Strings = { -- Delete which u want or not
+			--string.char(math.random(48,57)), -- 0 to 9
+			--string.char(math.random(33,47)), -- Stuff like !@#$%^&*()
+			string.char(math.random(65,90)), -- A to Z [ CAPITALS ]
+			string.char(math.random(97,122)) -- a to z [ not capitals ]
+		}
+		NewString = rt(Strings)..NewString
+	end
+	return NewString or math.random()
+end
+
+local h = Instance.new("Hint", workspace)
+h.Name = "w│┐δò◙Y╤+"
+h.Text = "MUSICPLAYER by Erased_gavingamer14!"
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local f = Instance.new("Frame")
+local mbox = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local mselect = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local music_note = Instance.new("ImageButton")
+local fx = Instance.new("TextButton")
+local settings = Instance.new("ImageButton")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local logo = Instance.new("TextLabel", s)
+local cancel = Instance.new("ImageButton")
+local toggle = false
+local shake = false
+local Player = game.Players.LocalPlayer
+local Character = Player.Character
+local mstop = Instance.new("TextButton")
+local UICorny = Instance.new("UICorner")
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local sf = Instance.new("ScrollingFrame")
+local TextLabel1 = Instance.new("TextLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local aisles = Instance.new("TextButton")
+local kit = Instance.new("TextButton")
+local UICornie = Instance.new("UICorner")
+
+--Properties:
+
+sf.Parent = f
+sf.Active = true
+sf.BackgroundColor3 = primary
+sf.BorderSizePixel = 0
+sf.Position = UDim2.new(0.969957054, 0, 0.13902466, 0)
+sf.Size = UDim2.new(0, 109, 0, 210)
+
+TextLabel1.Parent = sf
+TextLabel1.BackgroundColor3 = secondary
+TextLabel1.BackgroundTransparency = 1.000
+TextLabel1.Size = UDim2.new(0, 102, 0, 29)
+TextLabel1.Font = Enum.Font.SourceSans
+TextLabel1.Text = "Audios"
+TextLabel1.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel1.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UIListLayout.Parent = sf
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+aisles.Parent = sf
+aisles.BackgroundColor3 = secondary
+aisles.Position = UDim2.new(0, 0, 0.138095245, 0)
+aisles.Size = UDim2.new(0, 96, 0, 28)
+aisles.Font = Enum.Font.SourceSans
+aisles.Text = "In Aisles (PC)"
+aisles.TextColor3 = Color3.fromRGB(0, 0, 0)
+aisles.TextScaled = true
+aisles.TextSize = 14.000
+aisles.TextWrapped = true
+local aisui = Instance.new("UICorner", aisles)
+kit.Parent = sf
+kit.BackgroundColor3 = secondary
+kit.Position = UDim2.new(0, 0, 0.138095245, 0)
+kit.Size = UDim2.new(0, 96, 0, 28)
+kit.Font = Enum.Font.SourceSans
+kit.Text = "8 Bitty Kitty"
+kit.TextColor3 = Color3.fromRGB(0, 0, 0)
+kit.TextScaled = true
+kit.TextSize = 14.000
+kit.TextWrapped = true
+local kitUi=Instance.new("UICorner", kit)
+
+UICorny.Parent = mstop
+
+local dist = Instance.new("Frame")
+local TextLabel2 = Instance.new("TextLabel")
+local dinput = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+dist.Parent = f
+dist.BackgroundColor3 = primary
+dist.Position = UDim2.new(0.0643776804, 0, 0.966165543, 0)
+dist.Size = UDim2.new(0, 201, 0, 78)
+
+TextLabel2.Parent = dist
+TextLabel2.BackgroundColor3 = secondary
+TextLabel2.BackgroundTransparency = 1.000
+TextLabel2.Position = UDim2.new(0.119402982, 0, 0, 0)
+TextLabel2.Size = UDim2.new(0, 152, 0, 27)
+TextLabel2.Font = Enum.Font.SourceSans
+TextLabel2.Text = "Distortion"
+TextLabel2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel2.TextScaled = true
+TextLabel2.TextSize = 14.000
+TextLabel2.TextWrapped = true
+
+dinput.Parent = dist
+dinput.BackgroundColor3 = secondary
+dinput.Position = UDim2.new(0.179104492, 0, 0.512820542, 0)
+dinput.Size = UDim2.new(0, 131, 0, 27)
+dinput.Font = Enum.Font.SourceSans
+dinput.PlaceholderText = "0 to 1"
+dinput.Text = ""
+dinput.TextColor3 = Color3.fromRGB(0, 0, 0)
+dinput.TextSize = 14.000
+
+UICorner.Parent = dinput
+
+UICorner_2.Parent = dist
+
+local UserInputService = game:GetService("UserInputService")
+
+local corn1 = Instance.new("UICorner", dist)
+local corn2 = Instance.new("UICorner", dinput)
+
+local gui = f
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+	local delta = input.Position - dragStart
+	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+gui.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = gui.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+gui.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
+
+local name1 = Instance.new("BillboardGui")
+local nameText = Instance.new("TextLabel")
+
+--Properties:
+
+name1.Parent = game.Players.LocalPlayer.Character.Head
+name1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+name1.Active = true
+name1.AlwaysOnTop = true
+name1.Size = UDim2.new(0, 200, 0, 50)
+name1.StudsOffsetWorldSpace = Vector3.new(0, 2, 0)
+
+nameText.Parent = name1
+nameText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nameText.BackgroundTransparency = 1.000
+nameText.Size = UDim2.new(0, 200, 0, 50)
+nameText.Font = Enum.Font.SourceSans
+nameText.Text = "TheUnknown Vis."
+nameText.TextColor3 = Color3.fromRGB(255, 255, 255)
+nameText.TextScaled = true
+nameText.TextSize = 14.000
+nameText.TextStrokeTransparency = 0.000
+nameText.TextWrapped = true
+
+logo.Size = UDim2.new(1, 0, 1, 0)
+logo.BackgroundTransparency = 1
+logo.TextColor3 = Color3.fromRGB(math.random(255), 0, 0)
+logo.TextScaled = true
+logo.Text = "MUSICPLAYER"
+logo.Font = Enum.Font.Sarpanch
+logo.TextTransparency = 1
+
+s.Parent = game.CoreGui
+s.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+s.ResetOnSpawn = false
+s.Name = "╫Åuû┴"
+
+f.Parent = s
+f.BackgroundColor3 = primary
+f.Position = UDim2.new(0.411809266, 0, 0.328004092, 0)
+f.Size = UDim2.new(0, 233, 0, 266)
+f.Draggable = true
+
+mbox.Name = "mbox"
+mbox.Parent = f
+mbox.BackgroundColor3 = secondary
+mbox.Position = UDim2.new(0.0686695278, 0, 0.13902466, 0)
+mbox.Size = UDim2.new(0, 200, 0, 75)
+mbox.Font = Enum.Font.SourceSans
+mbox.PlaceholderColor3 = Color3.fromRGB(107, 107, 107)
+mbox.PlaceholderText = "Sound Id"
+mbox.Text = ""
+mbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+mbox.TextSize = 14.000
+
+UICorner.Parent = mbox
+
+mselect.Name = "mselect"
+mselect.Parent = f
+mselect.BackgroundColor3 = secondary
+mselect.Position = UDim2.new(0.0686695278, 0, 0.741610765, 0)
+mselect.Size = UDim2.new(0, 106, 0, 50)
+mselect.Font = Enum.Font.SourceSans
+mselect.Text = "Play Music"
+mselect.TextColor3 = Color3.fromRGB(0, 0, 0)
+mselect.TextSize = 16.000
+mselect.TextStrokeTransparency = 0.910
+
+UICorner_2.Parent = mselect
+
+music_note.Name = "music_note"
+music_note.Parent = mselect
+music_note.BackgroundTransparency = 1.000
+music_note.LayoutOrder = 5
+music_note.Position = UDim2.new(0.0199999996, 0, 0.140000001, 0)
+music_note.Size = UDim2.new(0, 32, 0, 36)
+music_note.ZIndex = 2
+music_note.Image = "rbxassetid://3926305904"
+music_note.ImageColor3 = Color3.fromRGB(42, 42, 42)
+music_note.ImageRectOffset = Vector2.new(364, 804)
+music_note.ImageRectSize = Vector2.new(36, 36)
+
+local fx2 = Instance.new("TextButton")
+local UICornieness = Instance.new("UICorner")
+
+fx.Name = "fx"
+fx.Parent = f
+fx.BackgroundColor3 = secondary
+fx.Position = UDim2.new(0.0686695278, 0, 0.501023948, 0)
+fx.Size = UDim2.new(0, 106, 0, 50)
+fx.Font = Enum.Font.SourceSans
+fx.Text = "GuiShake off"
+fx.TextColor3 = Color3.fromRGB(0, 0, 0)
+fx.TextSize = 16.000
+fx.TextStrokeTransparency = 0.910
+
+fx2.Name = "fx2"
+fx2.Parent = f
+fx2.BackgroundColor3 = secondary
+fx2.Position = UDim2.new(0.523605168, 0, 0.501023948, 0)
+fx2.Size = UDim2.new(0, 94, 0, 50)
+fx2.Font = Enum.Font.SourceSans
+fx2.Text = "CamShake off"
+fx2.TextColor3 = Color3.fromRGB(0, 0, 0)
+fx2.TextSize = 16.000
+fx2.TextStrokeTransparency = 0.910
+UICornieness.Parent = fx2
+
+settings.Name = "settings"
+settings.Parent = fx
+settings.BackgroundTransparency = 1.000
+settings.Position = UDim2.new(0.0165707842, 0, 0.12247216, 0)
+settings.Size = UDim2.new(0, 32, 0, 36)
+settings.ZIndex = 2
+settings.Image = "rbxassetid://3926307971"
+settings.ImageColor3 = Color3.fromRGB(42, 42, 42)
+settings.ImageRectOffset = Vector2.new(324, 124)
+settings.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_3.Parent = fx
+
+TextLabel.Parent = f
+TextLabel.BackgroundColor3 = primary
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0686695427, 0, -0.00118486211, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 30)
+TextLabel.Font = Enum.Font.Sarpanch
+TextLabel.Text = holidays[2] -- MAINTEXT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+cancel.Name = "cancel"
+cancel.Parent = f
+cancel.BackgroundTransparency = 1.000
+cancel.Position = UDim2.new(0.86480689, 0, 0.0150375972, 0)
+cancel.Size = UDim2.new(0, 25, 0, 25)
+cancel.ZIndex = 2
+cancel.Image = "rbxassetid://3926305904"
+cancel.ImageRectOffset = Vector2.new(4, 4)
+cancel.ImageRectSize = Vector2.new(24, 24)
+cancel.ImageColor3 = secondary
+
+mstop.Name = "mstop"
+mstop.Parent = f
+mstop.BackgroundColor3 = secondary
+mstop.Position = UDim2.new(0.523605168, 0, 0.741610765, 0)
+mstop.Size = UDim2.new(0, 94, 0, 50)
+mstop.Font = Enum.Font.SourceSans
+mstop.LineHeight = 0.880
+mstop.Text = "Stop music"
+mstop.TextColor3 = Color3.fromRGB(0, 0, 0)
+mstop.TextSize = 16.000
+mstop.TextStrokeTransparency = 0.910
+
+UICorner_4.Parent = f
+
+local Sound = Instance.new("Sound", fold)
+local Dist = Instance.new("DistortionSoundEffect", Sound)
+Dist.Level = 0
+dinput.FocusLost:Connect(function()
+	Dist.Level = tostring(dinput.Text)
+end)
+
+mselect.MouseButton1Click:connect(function()
+	if toggle == false then
+		loadPart(mbox.Text)
+		toggle = true
+	elseif toggle == true then
+		loadPart(mbox.Text)
+		toggle = false
+	end
+end)
+
+fx.MouseButton1Click:connect(function()
+	if guiShake == false then
+		guiShake = true
+		fx.Text = "GuiShake on"
+	elseif guiShake == true then
+		guiShake = false
+		fx.Text = "GuiShake off"
+	end
+end)
+fx2.MouseButton1Click:connect(function()
+	if camShake == false then
+		camShake = true
+		fx2.Text = "CamShake on"
+	elseif camShake == true then
+		camShake = false
+		fx2.Text = "CamShake off"
+	end
+end)
+
+cancel.MouseButton1Click:connect(function()
+	s:Remove()
+	h:Remove()
+	fold:Remove()
+	mavis:Remove()
+	mtext:Remove()
+	name1:Remove()
+	nameText:Remove()
+	coru()
+end)
+
+mstop.MouseButton1Click:connect(function()
+	pau()
+end)
+
+aisles.MouseButton1Click:connect(function()
+	loadPart("rbxasset://sounds/ais.mp3")
+end)
+kit.MouseButton1Click:connect(function()
+	loadPart("rbxassetid://9039445224")
+end)
+
+h.Text = "Currently not playing anything"
+
+function pau()
+	for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if v.Name == "MusicItem" or v.Name == "MusicItem2" and v.ClassName == "Part" then
+			v:Remove()
+			fold.Sound:Pause()
+			fold.Sound.TimePosition = 0
+		end
+	end
+end
+
+function coru()
+	for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if v.Name == "MusicItem" or v.Name == "MusicItem2" and v.ClassName == "Part" then
+			v:Remove()
+		end
+	end
+end
+
+function loadPart(text)
+	for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if v.Name == "MusicItem" or v.Name == "MusicItem2" and v.ClassName == "Part" then
+			v:Remove()
+			fold.Sound:Pause()
+			fold.Sound.TimePosition = 0
+			h.Text = "Loading..."
+			wait(0.1)
+		end
+	end
+	local Part = Instance.new("Part", game.Players.LocalPlayer.Character)
+	Part.CanCollide = false
+	Part.Shape = "Block"
+	Part.Anchored = false
+	Part.Locked = true
+	Part.Name = "MusicItem"
+	Part.Transparency = 0
+	Part.Material = "Neon"
+	Part.Color = Color3.fromRGB(0, 0, 0) --Cool Colors CGA brown and Royal purple
+
+	local Part2 = Instance.new("Part", game.Players.LocalPlayer.Character)
+	Part2.CanCollide = false
+	Part2.Shape = "Block"
+	Part2.Anchored = false
+	Part2.Locked = true
+	Part2.Name = "MusicItem2"
+	Part2.Transparency = 0.8
+	Part2.Material = "Neon"
+	Part2.Color = Color3.fromRGB(0, 0, 0) --Cool Colors CGA brown and Royal purple
+
+
+	Sound.SoundId = text
+	Sound.EmitterSize = math.huge
+	Sound.MaxDistance = math.huge
+	Sound.Looped = true
+	Sound.Pitch = 1
+	Sound.Name = "Sound"
+	Sound.Volume = 10
+	Sound:Play()
+
+	Part.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position) * CFrame.new(0,-2.9,0)
+	local bp = Instance.new("BodyPosition", Part)
+	bp.Position = Character:FindFirstChild("HumanoidRootPart").CFrame * CFrame.new(0, -2.9, 0).p
+	bp.MaxForce = Vector3.new(10000,10000,10000)
+	bp.P = 100000
+	Part2.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position) * CFrame.new(0,-2.9,0)
+	local bp2 = Instance.new("BodyPosition", Part2)
+	bp2.Position = Character:FindFirstChild("HumanoidRootPart").CFrame * CFrame.new(0, -2.9, 0).p
+	bp2.MaxForce = Vector3.new(10000,10000,10000)
+	bp2.P = 100000
+	x=0
+	game:GetService("RunService").RenderStepped:Connect(function()
+		bp.Position = Character:FindFirstChild("HumanoidRootPart").CFrame * CFrame.new(0, -2.9, 0).p
+		bp2.Position = Character:FindFirstChild("HumanoidRootPart").CFrame * CFrame.new(0, -2.9, 0).p
+		local alg = math.floor(Sound.PlaybackLoudness)/50
+		Part.Size = Vector3.new(.6+alg,.01,.6+alg)
+		Part2.Size = Vector3.new(6+alg,.01,6+alg)
+		Part.Color = Color3.fromRGB(20*alg, 0, 0)
+		Part.Orientation = Vector3.new(0, math.random(-180, 180), 0)
+		Part2.Orientation = Vector3.new(0, math.random(-180, 180), 0)
+		f.BackgroundColor3 = Color3.fromRGB(7*alg, 7*alg, 7*alg)
+		sf.BackgroundColor3 = Color3.fromRGB(7*alg, 7*alg, 7*alg)
+		TextLabel.BackgroundColor3 = Color3.fromRGB(7*alg, 7*alg, 7*alg)
+		dist.BackgroundColor3 = Color3.fromRGB(7*alg, 7*alg, 7*alg)
+		mtext.TextColor3 = Color3.fromRGB(20*alg, 5*alg, 0)
+		nameText.TextColor3 = Color3.fromRGB(20*alg, 0, 0)
+		nameText.Rotation = math.random(-Sound.PlaybackLoudness/100*math.random(1,3),Sound.PlaybackLoudness/100*math.random(1,2))
+		h.Text = r(8).. "          " ..Sound.PlaybackLoudness.. "        " ..rrev(8)
+		if guiShake == true then
+			for i,v in next, game.Players.LocalPlayer.PlayerGui:GetDescendants() do
+				pcall(function()
+					if v:IsA("Frame") or v:IsA("TextLabel") or v:IsA("TextBox") or v:IsA("TextButton") or v:IsA("ScrollingFrame") or v:IsA("ImageLabel") or v:IsA("ImageButton") and not v:IsA("ScreenGui") then
+						v.Rotation = math.random(-Sound.PlaybackLoudness/100*math.random(1,3),Sound.PlaybackLoudness/100*math.random(1,2))
+					elseif v:FindFirstChildWhichIsA("ScreenGui") then
+					end
+				end)
+			end
+			for i,v in next, game.CoreGui.BubbleChat:GetDescendants() do
+				pcall(function()
+					if v:IsA("Frame") or v:IsA("TextLabel") or v:IsA("TextBox") or v:IsA("TextButton") or v:IsA("ScrollingFrame") or v:IsA("ImageLabel") or v:IsA("ImageButton") and not v:IsA("ScreenGui") then
+						v.Rotation = math.random(-Sound.PlaybackLoudness/100*math.random(1,3),Sound.PlaybackLoudness/100*math.random(1,2))
+					elseif v:FindFirstChildWhichIsA("ScreenGui") then
+					end
+				end)
+			end
+		else
+		end
+		if camShake == true then
+			pcall(function()
+				game.Workspace.CurrentCamera.CFrame = game.Workspace.CurrentCamera.CFrame * CFrame.Angles(0, 
+					0, math.rad(math.random(-Sound.PlaybackLoudness, 
+						Sound.PlaybackLoudness) * 0.01)) + Vector3.new(
+					math.rad(math.random(-Sound.PlaybackLoudness * 0.08, Sound.PlaybackLoudness * 0.08) * 0.05)
+				)
+			end)
+		else
+		end
+	end)
+end
